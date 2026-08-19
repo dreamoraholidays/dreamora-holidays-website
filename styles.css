@@ -289,3 +289,188 @@
   }
 
 }
+
+/* =========================================
+   DREAMORA HOLIDAYS — PREMIUM HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 17, 38, 0.96) 0%,
+      rgba(4, 17, 38, 0.82) 42%,
+      rgba(4, 17, 38, 0.45) 72%,
+      rgba(4, 17, 38, 0.25) 100%
+    ),
+    url("thailand-hero.jpg") center center / cover no-repeat;
+}
+
+/* Dark premium overlay */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(4,17,38,0.10),
+    rgba(4,17,38,0.30)
+  );
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 650px;
+  margin-left: max(6vw, 30px);
+  padding: 100px 30px;
+}
+
+.hero-eyebrow {
+  display: block;
+  margin-bottom: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 4px;
+
+  color: #d8b46a;
+}
+
+.hero-content h1 {
+  margin: 0;
+
+  font-size: clamp(52px, 6vw, 82px);
+  line-height: 0.95;
+  font-weight: 500;
+  letter-spacing: -2px;
+
+  color: #ffffff;
+}
+
+.hero-content h1 em {
+  display: block;
+  margin-top: 10px;
+
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 0.65em;
+  font-weight: 600;
+  font-style: italic;
+
+  color: #d8b46a;
+}
+
+.hero-price {
+  margin-top: 32px;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  color: #ffffff;
+}
+
+.hero-price span {
+  font-size: 14px;
+  font-weight: 400;
+
+  color: rgba(255,255,255,0.70);
+}
+
+.hero-note {
+  margin: 7px 0 30px;
+
+  font-size: 13px;
+  color: rgba(255,255,255,0.70);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 165px;
+  padding: 15px 24px;
+
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.hero-btn-primary {
+  background: #d8b46a;
+  color: #071b38;
+}
+
+.hero-btn-primary:hover {
+  background: #ffffff;
+  transform: translateY(-2px);
+}
+
+.hero-btn-outline {
+  border: 1px solid rgba(255,255,255,0.45);
+
+  background: rgba(255,255,255,0.06);
+
+  color: #ffffff;
+
+  backdrop-filter: blur(8px);
+}
+
+.hero-btn-outline:hover {
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    min-height: 680px;
+
+    background-position: 65% center;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    padding: 100px 24px 70px;
+  }
+
+  .hero-content h1 {
+    font-size: 52px;
+  }
+
+  .hero-price {
+    font-size: 34px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .hero-btn {
+    width: 100%;
+  }
+
+}
