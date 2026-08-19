@@ -18,3 +18,53 @@
 .destination-card.more .destination-content p{color:rgba(255,255,255,.75)}.destination-card.more .destination-content a{color:#f3bf36}
 @media (max-width:900px){.destination-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:600px){.destination-grid{grid-template-columns:1fr}.destination-image{height:200px}}
+/* Founder Section */
+
+.founder-section{
+  padding:80px 0;
+  background:#fff;
+}
+
+.founder-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.founder-image img{
+  width:100%;
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.founder-content h2{
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.founder-content p{
+  margin-bottom:15px;
+  color:#555;
+  line-height:1.8;
+}
+
+.founder-badge{
+  margin-top:25px;
+  padding:20px;
+  background:#f8f8f8;
+  border-left:4px solid #d4af37;
+  border-radius:10px;
+}
+
+.founder-badge span{
+  display:block;
+  margin-top:5px;
+  color:#777;
+}
+
+@media(max-width:768px){
+  .founder-grid{
+    grid-template-columns:1fr;
+  }
+}
