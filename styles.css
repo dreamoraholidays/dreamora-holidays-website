@@ -70,56 +70,110 @@
 }
 /* ===== DREAMORA PREMIUM HERO ===== */
 
+/* =========================================
+   DREAMORA HOLIDAYS — PREMIUM HERO
+   ========================================= */
+
+.hero {
+  position: relative;
+  min-height: 720px;
+  overflow: hidden;
+
+  /* Premium dark background */
+  background-color: #071b38;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Dark premium overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 17, 38, 0.97) 0%,
+      rgba(4, 17, 38, 0.88) 35%,
+      rgba(4, 17, 38, 0.60) 65%,
+      rgba(4, 17, 38, 0.30) 100%
+    );
+
+  z-index: 1;
+}
+
+/* Hero content */
 .hero-content {
   max-width: 720px;
   position: relative;
   z-index: 2;
 }
 
+/* Small top label */
 .hero-eyebrow {
   display: inline-block;
   margin-bottom: 22px;
+
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
+
   color: #d8b46a;
 }
 
+/* Main heading */
 .hero-content h1 {
   margin: 0;
+
   font-size: clamp(48px, 6vw, 82px);
   line-height: 0.98;
+
   font-weight: 500;
   letter-spacing: -2px;
+
   color: #ffffff;
 }
 
+/* Gold italic line */
 .hero-content h1 em {
   display: block;
+
   margin-top: 8px;
+
   font-family: Georgia, serif;
   font-weight: 400;
   font-style: italic;
+
   color: #d8b46a;
 }
 
+/* Subtitle */
 .hero-subtitle {
   margin: 24px 0 28px;
+
   font-size: 17px;
+  line-height: 1.6;
+
   color: rgba(255,255,255,0.78);
 }
 
+/* Price area */
 .hero-offer {
   display: flex;
   align-items: baseline;
   gap: 12px;
+
   margin-bottom: 8px;
 }
 
 .hero-offer span {
   font-size: 13px;
+
   color: rgba(255,255,255,0.65);
+
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
@@ -127,20 +181,26 @@
 .hero-offer strong {
   font-size: 38px;
   font-weight: 700;
+
   color: #ffffff;
 }
 
 .hero-offer small {
   font-size: 14px;
+
   color: rgba(255,255,255,0.65);
 }
 
+/* Flight note */
 .hero-note {
   margin: 0 0 30px;
+
   font-size: 13px;
+
   color: #d8b46a;
 }
 
+/* Buttons */
 .hero-buttons {
   display: flex;
   gap: 12px;
@@ -149,16 +209,22 @@
 
 .hero-buttons .btn {
   min-width: 170px;
+
   padding: 14px 24px;
+
   border-radius: 3px;
+
   font-size: 12px;
   font-weight: 700;
+
   letter-spacing: 1.2px;
   text-align: center;
   text-decoration: none;
+
   transition: all 0.3s ease;
 }
 
+/* View itinerary */
 .hero-buttons .btn-primary {
   background: #d8b46a;
   color: #071b38;
@@ -169,10 +235,15 @@
   background: #ffffff;
 }
 
+/* WhatsApp */
 .hero-buttons .btn-whatsapp {
   background: rgba(255,255,255,0.08);
+
   border: 1px solid rgba(255,255,255,0.35);
+
   color: #ffffff;
+
+  backdrop-filter: blur(10px);
 }
 
 .hero-buttons .btn-whatsapp:hover {
@@ -181,9 +252,15 @@
 }
 
 
-/* ===== MOBILE ===== */
+/* =========================================
+   MOBILE
+   ========================================= */
 
 @media (max-width: 768px) {
+
+  .hero {
+    min-height: 650px;
+  }
 
   .hero-content {
     max-width: 100%;
